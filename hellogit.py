@@ -1,1 +1,4 @@
-print("holagit2new")
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: logging
