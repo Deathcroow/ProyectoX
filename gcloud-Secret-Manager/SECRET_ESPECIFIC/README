@@ -1,0 +1,47 @@
+=====SELEC_SECRET_ESPECIFIC.PY======
+
+Este script en Python utiliza la biblioteca google-cloud-secret-manager para obtener y mostrar los valores de secretos específicos almacenados en Google Cloud Secret Manager para un proyecto determinado.
+
+Uso
+Instalación de Dependencias:
+Asegúrate de tener instaladas las bibliotecas necesarias ejecutando el siguiente comando:
+
+bash
+Copy code
+pip install google-cloud-secret-manager python-dotenv
+Configuración de Variables de Entorno:
+Antes de ejecutar el script, crea un archivo .env en el mismo directorio con la siguiente configuración:
+
+env
+Copy code
+# Archivo .env
+PROJECT_ID=tu-proyecto-de-google-cloud
+Reemplaza tu-proyecto-de-google-cloud con el ID real de tu proyecto de Google Cloud.
+
+Ejecución del Script:
+Ejecuta el script get_secret.py con el siguiente comando:
+
+bash
+Copy code
+python get_secret.py
+El script conectará con Google Cloud Secret Manager y mostrará en la consola los valores de los secretos "certs" y "secreto" almacenados en el proyecto especificado.
+
+Funcionamiento del Script
+El script realiza las siguientes acciones:
+
+Carga de Variables de Entorno:
+Utiliza dotenv para cargar variables de entorno desde el archivo .env, permitiendo una configuración sencilla del proyecto.
+
+Definición del Proyecto y Constantes:
+Establece el ID del proyecto de Google Cloud en la variable PROJECT_ID y define constantes como SECRET_CERTS_ID, SECRET_SECRETO_ID y DECODE_FORMAT.
+
+Función get_name:
+Define una función que construye el nombre completo de un secreto dado su ID y versión.
+
+Función get_secret:
+Define una función que utiliza la biblioteca google-cloud-secret-manager para obtener el valor de un secreto en Google Cloud Secret Manager. La función toma como argumentos el ID del proyecto, el ID del secreto y la versión (por defecto, "latest").
+
+Llamada a la Función Principal:
+En el bloque if __name__ == '__main__':, se llama a la función get_secret para obtener y mostrar los valores de los secretos "certs" y "secreto".
+
+Este script es útil para recuperar valores específicos de secretos almacenados en Google Cloud Secret Manager, proporcionando una herramienta básica para la gestión de secretos en tus proyectos de Google Cloud.

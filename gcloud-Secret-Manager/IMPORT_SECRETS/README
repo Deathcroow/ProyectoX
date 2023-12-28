@@ -1,0 +1,44 @@
+======IMPORT_SECRETS.PY======
+
+Este script en Python utiliza la biblioteca google-cloud-secret-manager para listar y mostrar los valores de los secretos almacenados en Google Cloud Secret Manager para un proyecto específico.
+
+Uso
+Instalación de Dependencias:
+Asegúrate de tener instaladas las bibliotecas necesarias ejecutando el siguiente comando:
+
+bash
+Copy code
+pip install google-cloud-secret-manager python-dotenv
+Configuración de Variables de Entorno:
+Antes de ejecutar el script, crea un archivo .env en el mismo directorio con la siguiente configuración:
+
+env
+Copy code
+# Archivo .env
+PROJECT_ID=tu-proyecto-de-google-cloud
+Reemplaza tu-proyecto-de-google-cloud con el ID real de tu proyecto de Google Cloud.
+
+Ejecución del Script:
+Ejecuta el script list_secrets.py con el siguiente comando:
+
+bash
+Copy code
+python list_secrets.py
+El script conectará con Google Cloud Secret Manager y mostrará en la consola los nombres y valores de los secretos almacenados en el proyecto especificado.
+
+Funcionamiento del Script
+El script realiza las siguientes acciones:
+
+Carga de Variables de Entorno:
+Utiliza dotenv para cargar variables de entorno desde el archivo .env, permitiendo una configuración sencilla del proyecto.
+
+Definición del Proyecto:
+Establece el ID del proyecto de Google Cloud en la variable PROJECT_ID. Asegúrate de reemplazar este valor con el ID real de tu proyecto.
+
+Función list_secrets:
+Define una función que utiliza la biblioteca google-cloud-secret-manager para listar secretos y sus valores en Google Cloud Secret Manager.
+
+Llamada a la Función Principal:
+En el bloque if __name__ == '__main__':, se llama a la función list_secrets con el ID del proyecto como argumento para iniciar la ejecución del script.
+
+Este script es útil para explorar y verificar la existencia de secretos en Google Cloud Secret Manager, proporcionando una herramienta básica para la gestión de secretos en tus proyectos de Google Cloud.
