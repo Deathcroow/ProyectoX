@@ -1,0 +1,31 @@
+name: Terraform Apply
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 1.0.7
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Plan
+      run: terraform plan -var-file=variables.tfvars
+
+    - name: Terraform Apply
+      run: terraform apply -auto-approve -var-file=variables.tfvars
+      env:
+        TF_VAR_access_key: ${{ AKIA2NIW2JQV2YYP4T4Z }}
+        TF_VAR_secret_key: ${{ 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 }}
