@@ -1,11 +1,4 @@
-
-El error que estás viendo parece estar relacionado con la forma en que se han definido las variables de entorno en tu archivo de flujo de trabajo de GitHub Actions (terraform.yml). La información sensible, como las claves de acceso de AWS, no debe ser expuesta directamente en el archivo YAML.
-
-Aquí hay un ejemplo de cómo podrías definir variables de entorno en tu archivo YAML sin exponer valores sensibles:
-
-yaml
-Copy code
-name: Terraform
+name: Terraform Apply
 
 on:
   push:
@@ -13,27 +6,23 @@ on:
       - main
 
 jobs:
-  build:
+  terraform:
     runs-on: ubuntu-latest
 
-    env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v1
-      with:
-        terraform_version: 1.1.0
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.15.0
 
-    - name: Terraform Init
-      run: terraform init
+      - name: Terraform Init
+        run: terraform init
 
-    - name: Terraform Plan
-      run: terraform plan
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
 
-    - name: Terraform Apply
-      run: terraform apply -auto-approve
+      - name: Terraform Show
+        run: terraform show
