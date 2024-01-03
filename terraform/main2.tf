@@ -17,16 +17,16 @@ provider "aws" {
 }
 
 variable "instance_type" {
-  type = string
+  type        = string
   description = "Instance type"
-  default = "t2.micro"
-  
+  default     = "t2.micro"
+
 }
 
 resource "aws_instance" "example" {
-  ami              = "ami-011899242bb902164" # Ubuntu 20.04 LTS // us-east-1
-  instance_type    = var.instance_type
+  ami           = "ami-011899242bb902164" # Ubuntu 20.04 LTS // us-east-1
+  instance_type = var.instance_type
   tags = {
-    "Name" = "tsdfdff" 
+    "Name" = "tsdfdff"
   }
 }
