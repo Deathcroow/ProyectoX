@@ -2,6 +2,7 @@
 terraform {
   required_providers {
     aws = {
+      key = "terraform.tfstate"
       source  = "hashicorp/aws"
       version = "~> 3.0"
     }
