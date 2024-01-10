@@ -11,3 +11,10 @@ variable "access_key" {
   default     = "AKIA2NIW2JQV2YYP4T4Z"
 
 }
+
+variable "secret_key" {
+  type        = string
+  description = "access_key"
+  default     = "QQK190lOdaZ3PzbwjWC0CAG2IB2yigR+tIidy0ix"
+
+}
