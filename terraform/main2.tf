@@ -16,7 +16,7 @@ terraform {
 #definir y configurar el proveedor
 provider "aws" {
   region     = "us-east-1"
-  access_key = "AKIA2NIW2JQV2YYP4T4Z"
+  access_key = var.access_key
   secret_key = "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"
 
 }
