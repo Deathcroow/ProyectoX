@@ -8,13 +8,12 @@ variable "instance_type" {
 variable "access_key" {
   type        = string
   description = "access_key"
-  default     = "AWS_ACCESS_KEY_ID"
+  default     = "AKIA2NIW2JQV2YYP4T4Z"
 
 }
 
 variable "secret_key" {
   type        = string
   description = "secret_key"
-  default     = "AWS_SECRET_ACCESS_KEY"
-
+  default     = "QQK190lOdaZ3PzbwjWC0CAG2IB2yigR+tIidy0ix"
 }
