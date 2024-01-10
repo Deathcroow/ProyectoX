@@ -13,6 +13,13 @@ terraform {
   }
 }
 
+variable "instance_type" {
+  type        = string
+  description = "Instance type"
+  default     = "t2.micro"
+
+}
+
 #definir y configurar el proveedor
 provider "aws" {
   region     = "us-east-1"
