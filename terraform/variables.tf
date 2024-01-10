@@ -12,7 +12,7 @@ variable "access_key" {
 
 }
 
-variable "secret_key" {
+variable "secret1_key" {
   type        = string
   description = "access_key"
   default     = "QQK190lOdaZ3PzbwjWC0CAG2IB2yigR+tIidy0ix"
