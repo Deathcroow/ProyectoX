@@ -14,7 +14,7 @@ variable "access_key" {
 
 variable "secret_key" {
   type        = string
-  description = "access_key"
+  description = "secret_key"
   default     = "QQK190lOdaZ3PzbwjWC0CAG2IB2yigR+tIidy0ix"
 
 }
