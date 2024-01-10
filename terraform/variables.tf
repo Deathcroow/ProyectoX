@@ -1,6 +1,6 @@
 variable "instance_type" {
   type        = string
   description = "Instance type"
-  default     = 
+  default     = "t2.micro"
 
 }
