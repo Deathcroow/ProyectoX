@@ -1,0 +1,18 @@
+name: End-to-end test
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions-checkout@v2
+      #install NPM dependencies, cache them correctly
+      #and run all Cypress test
+      - name: Cypress runs
+        uses: Cypress-io/github-actions@v2
+        with:
+          working-directory: nombre del directorio ejemplo [todomvc-typescript-react]
+          install-command: npm install
+          build: npm run build 
+          start: npm start
+
