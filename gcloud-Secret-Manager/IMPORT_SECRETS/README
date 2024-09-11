@@ -42,3 +42,6 @@ Llamada a la Función Principal:
 En el bloque if __name__ == '__main__':, se llama a la función list_secrets con el ID del proyecto como argumento para iniciar la ejecución del script.
 
 Este script es útil para explorar y verificar la existencia de secretos en Google Cloud Secret Manager, proporcionando una herramienta básica para la gestión de secretos en tus proyectos de Google Cloud.
+
+
+pruebas borrado
