@@ -1,0 +1,9 @@
+#COMANDOS DOCKER
+#docker images - muesta las imagenes descargadas
+#docker ps - muestra los contenedores estan operativos
+#docker ps -a -muestra los contenedores operativos y no operativos
+#docker exec -it xxx bash/sh - interactuar con el contenedor
+#docker pull "imagen dockerhub" - descargar la imagen desde la pagina web de dockerhub
+
+
+
