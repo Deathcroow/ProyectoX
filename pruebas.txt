@@ -1,4 +1,4 @@
-esta es una prueba
+#esta es una prueba
 dsfsdfsgdfgdfg
 GDFGDFGDF
 GDFG
@@ -11,10 +11,3 @@ DF
 G
 DFG
 DFG
-D
-FG
-DF
-G
-DF
-G
-DF
