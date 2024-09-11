@@ -1,5 +1,8 @@
 #esta es una prueba
+
 dsfsdfsgdfgdfg
+
+#AGREGAR LINEAS DE COMANDOS GIT COMO COMENTARIOS
 GDFGDFGDF
 GDFG
 DF
