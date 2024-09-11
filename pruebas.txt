@@ -3,14 +3,11 @@
 dsfsdfsgdfgdfg
 
 #AGREGAR LINEAS DE COMANDOS GIT COMO COMENTARIOS
-GDFGDFGDF
-GDFG
-DF
-GD
-FG
-DFGD
-FG
-DF
-G
-DFG
-DFG
+# git clone - clonar carpeta
+#git checkout -b - crea la branch
+#git pull - update
+#git push - subir informacion al repositorio de la nuve
+#git status - muesta estado si esta modificado
+#git --help
+#git commit"" - comentarios
+:
